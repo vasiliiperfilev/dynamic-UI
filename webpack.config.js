@@ -6,14 +6,13 @@ module.exports = {
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      template: 'src/index.html',
     }),
   ],
   output: {
-    filename: 'index.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    template: 'src/index.html',
   },
   devtool: 'inline-source-map',
   devServer: {
