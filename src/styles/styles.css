@@ -27,26 +27,29 @@ body {
 header {
     background-color: var(--header-bg);
     height: 50px;
-    display: grid;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .trigger {
-    background-image: url(../assets/menu.png);
     background-repeat: no-repeat;
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width:max-content;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     list-style: none;
     font-size: 1.2rem;
     position: absolute;
-    top: 50px;
+    top: 100%;
     background-color: var(--header-bg);
-    width: 100px;
+    width: max-content;
     display: grid;
     transform-origin: top center;
     transform: scaleY(0);
@@ -55,17 +58,22 @@ header {
 
 .menu>li {
     padding: 20px;
+    background-color: var(--header-bg);
 }
 
 .menu>li:hover {
-    background-color: var(--hover-bg);
+    filter: brightness(110%);
+}
+
+.trigger.clicked>span{
+    filter: brightness(85%);
 }
 
 .trigger.clicked .menu {
     transform: scaleY(1);
 }
 
-.mobile-trigger {
+.mobile.trigger {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -81,7 +89,7 @@ header {
     transform-origin: center;
 }
 
-.mobile-menu {
+.mobile.trigger>.menu {
     list-style: none;
     font-size: 1.2rem;
     transform-origin: bottom right;
@@ -89,22 +97,26 @@ header {
     transition: 300ms ease-in-out;
     display: flex;
     flex-direction:column-reverse;
+    align-items: flex-end;
     position: absolute;
     right: -10px;
-    bottom: -20px;
+    bottom: -10px;
     row-gap: 10px;
     color: var(--header-bg);
-    width: 120px;
+    width: max-content;
     z-index: 2;
+    background-color: transparent;
 }
 
-.mobile-menu>li {
+.mobile.trigger>.menu>li {
     display: flex;
     align-items: center;
     column-gap: 10px;
+    padding: 0;
+    background-color: transparent;
 }
 
-.mobile-menu>li>span {
+.mobile.trigger>.menu>li>span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,19 +127,19 @@ header {
     color: var(--font-color);
 }
 
-.mobile-trigger.clicked {
+.mobile.trigger.clicked {
     transform: scale(0.5);
 }
 
-.mobile-trigger.clicked .mobile-menu {
+.mobile.trigger.clicked>.menu {
     transform: scale(2);
 }
 
-.mobile-trigger.clicked .mobile-wrapper {
-    transform: scale(4);
+.mobile.trigger.clicked>span {
+    transform: scale(3);
 }
 
-.mobile-wrapper {
+.mobile.trigger>span {
     width: 100vw;
     height: 100vh;
     border-radius: 500px;
