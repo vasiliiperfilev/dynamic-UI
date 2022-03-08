@@ -1,35 +1,7 @@
-:root {
-    --header-bg: rgb(0, 128, 85);
-    --font-color: rgb(235, 255, 226);
-    --hover-bg: rgb(0, 109, 73);
-    --wrapper-bg: rgba(0, 0, 0, 0.1);
-}
-
 * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    color: var(--font-color);
-}
-
-.preload * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-}
-
-header {
-    background-color: var(--header-bg);
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .trigger {

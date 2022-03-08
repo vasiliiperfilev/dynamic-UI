@@ -1,10 +1,5 @@
-/* eslint-disable quote-props */
 import './styles/normalize.css';
 import './styles/styles.css';
-
-window.addEventListener('load', () => {
-  document.querySelector('body').classList.remove('preload');
-});
 
 function triggerMenu() {
   if (this.classList.contains('clicked')) {
@@ -64,20 +59,4 @@ function createMobileMenu(menuNamesList, styles, symbolsList) {
   return menu;
 }
 
-const styles = {
-  '.trigger': {
-    'background-color': 'rgb(0, 128, 85)',
-    'color': 'rgb(235, 255, 226)',
-  },
-};
-const menuNames = ['Option 1', 'Long option 2', 'ShOpt3'];
-const menu = createMenu('MenuOne', menuNames, styles);
-document.querySelector('header').append(menu);
-const mobileStyles = {
-  '.mobile.trigger': {
-    'background-color': 'rgb(0, 128, 85)',
-    'color': 'rgb(235, 255, 226)',
-  },
-};
-const mobileMenu = createMobileMenu(menuNames, mobileStyles, ['+', '!', 'x']);
-document.querySelector('body').append(mobileMenu);
+export { createMenu, createMobileMenu };
