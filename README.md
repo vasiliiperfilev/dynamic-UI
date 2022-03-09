@@ -32,7 +32,7 @@ import {createMenu, createMobileMenu} from "desktop-and-mobile-menu";
 
 const styles = { // template is 'css-selector': {'css-property': 'property-value', 'another-css-property': 'another-value'}
   '.trigger': { // selector
-    'background-color': 'rgb(0, 128, 85)', // roperty1
+    'background-color': 'rgb(0, 128, 85)', // property1
     'color': 'rgb(235, 255, 226)', // property 2
   }, // next selector can be added
 };
