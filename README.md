@@ -4,8 +4,8 @@
 
 <hr/>
 
-![Website Desktop Menu](https://imgur.com/T6YeqGf)
-![Website Mobile Menu](https://imgur.com/CMnvElb)
+![Website Desktop Menu](https://imgur.com/T6YeqGf.gif)
+![Website Mobile Menu](https://imgur.com/CMnvElb.gif)
 
 <h3> List of features </h3>
 
@@ -30,7 +30,7 @@ Guide for Webpack's css-cloade config can be found here: https://webpack.js.org/
 
 import {createMenu, createMobileMenu} from "desktop-and-mobile-menu";
 
-const styles = { // styles object properties template is 'css-selector': {'css-property': 'property-value', 'another-css-property': 'another-value'}
+const styles = { // template is 'css-selector': {'css-property': 'property-value', 'another-css-property': 'another-value'}
   '.trigger': { // selector
     'background-color': 'rgb(0, 128, 85)', // roperty1
     'color': 'rgb(235, 255, 226)', // property 2
