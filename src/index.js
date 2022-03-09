@@ -1,4 +1,3 @@
-import './styles/normalize.css';
 import './styles/styles.css';
 
 function triggerMenu() {
@@ -37,7 +36,7 @@ function createMenu(menuName, menuNamesList, styles) {
   const trigger = createDOMelement('div', null, 'trigger');
   const menu = createDOMelement('ul', null, 'menu');
   addLiToUl(menu, menuNamesList, styles);
-  changeElementsStyle(styles);
+  if (styles) changeElementsStyle(styles);
   const span = createDOMelement('span', menuName, null);
   trigger.append(span, menu);
   trigger.addEventListener('click', triggerMenu);
